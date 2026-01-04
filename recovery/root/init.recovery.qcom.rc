@@ -7,12 +7,19 @@ on early-init
     symlink /vendor/bt_firmware /bt_firmware
     symlink /vendor/dsp /dsp
     write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+    mkdir /vendor/lib/modules 0755 root root
 
 on init
+    start vendor.display-hal
+    start vendor.qti.hardware.display.composer-service
     mount_all /vendor/etc/charger_fw_fstab.qti --early
     write /sys/class/backlight/panel0-backlight/brightness 200
     setprop sys.usb.configfs 1
     write /sys/class/power_supply/usb/otg_switch 1
+    insmod /vendor/lib/modules/sensors_class.ko
+
+on late-init
+    insmod /vendor/lib/modules/focaltech_ts.ko
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}

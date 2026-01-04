@@ -16,7 +16,7 @@
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
-TW_DEVICE_VERSION := nyxalune
+TW_DEVICE_VERSION := mysellysenpai
 
 # Architecture
 TARGET_ARCH := arm64
@@ -63,6 +63,9 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_INCLUDE_DTB_IN_VENDOR_BOOTIMG := true
 
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
+BOARD_KERNEL_CMDLINE += androidboot.dtbo_idx=0
+BOARD_KERNEL_CMDLINE += androidboot.hardware=Spacewar
+BOARD_KERNEL_CMDLINE += androidboot.mode=normal
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += androidboot.memcg=1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
@@ -172,3 +175,5 @@ BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 VENDOR_BOOT_HAS_RECOVERY_RAMDISK := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+
+TW_INCLUDE_ADB_IN_RECOVERY := true

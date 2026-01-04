@@ -509,3 +509,13 @@ firmware_directories /vendor/firmware_mnt/image/
 
 # NFC ST Driver permissions
 /dev/st21nfc              0660   nfc        nfc
+
+# Touchscreen input
+/dev/input/event*    0660   root   input
+/dev/input/ts*       0660   root   input
+
+# I2C for touchscreen
+/dev/i2c-*           0660   root   system
+
+# SPI (eğer SPI touch varsa)
+/dev/spidev*         0660   root   system
