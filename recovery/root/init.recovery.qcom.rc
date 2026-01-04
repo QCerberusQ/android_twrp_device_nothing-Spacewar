@@ -18,9 +18,6 @@ on init
     write /sys/class/power_supply/usb/otg_switch 1
     insmod /vendor/lib/modules/sensors_class.ko
 
-on late-init
-    insmod /vendor/lib/modules/focaltech_ts.ko
-
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
