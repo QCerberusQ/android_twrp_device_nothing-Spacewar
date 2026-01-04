@@ -16,7 +16,7 @@
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
-TW_DEVICE_VERSION := mysellysenpai
+TW_DEVICE_VERSION := QCerberusQ
 
 # Architecture
 TARGET_ARCH := arm64
@@ -63,9 +63,6 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_INCLUDE_DTB_IN_VENDOR_BOOTIMG := true
 
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
-BOARD_KERNEL_CMDLINE += androidboot.dtbo_idx=0
-BOARD_KERNEL_CMDLINE += androidboot.hardware=Spacewar
-BOARD_KERNEL_CMDLINE += androidboot.mode=normal
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += androidboot.memcg=1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
