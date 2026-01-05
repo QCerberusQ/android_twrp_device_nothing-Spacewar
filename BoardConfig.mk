@@ -91,7 +91,7 @@ TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 
 # Kernel source
 TARGET_KERNEL_SOURCE := kernel/nothing/sm7325
-TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig
+TARGET_KERNEL_CONFIG := Spacewar_defconfig
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 
