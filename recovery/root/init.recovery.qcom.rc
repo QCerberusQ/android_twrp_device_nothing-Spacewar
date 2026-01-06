@@ -5,6 +5,8 @@ on early-init
     exec u:r:recovery:s0 -- /system/bin/set_permissive.sh
 
 on init
+    # vendor HAL'ler için (early-init DEĞİL)
+    setenforce 0
     # Panel brightness
     write /sys/class/backlight/panel0-backlight/brightness 200
 
